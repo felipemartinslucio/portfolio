@@ -1,0 +1,372 @@
+/* Estilos Gerais */
+* {
+    padding: 0; /* Zera o padding padrão do navegador */
+    margin: 0; /* Zera a margem padrão do navegador */
+    font-family: 'Arial', sans-serif; /* Fonte */
+    box-sizing: border-box; /* Faz com que as bordas sejam inclusas no tamanho do width e height */
+}
+
+ul, ol {
+    list-style: none; /* Remove o sublinhado dos tópicos */
+}
+
+a {
+    text-decoration: none; /* Remove a decoração dos links */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+/* ---------- */
+
+
+
+/* Grid Centralizado */
+.grid-centralizado {
+    max-width: 1140px; /* Centraliza o grid em telas a partir de 1140px de largura */
+    margin: 0 auto; /* Coloca margem no grid, deixando-o centralizado */
+}
+/* --------- */ 
+
+
+
+/* Estilos do Header */
+header {
+    padding: 0 50px;
+    background-color: #111;
+    border-bottom: 1px solid #101013;
+    color: white;
+    position: fixed; /* Torna o header fixo ao rolar a página */
+    top: 0; /* Fixa o header no topo */
+    left: 0; /* Fixa o header à esquerda */
+    width: 100%; /* Header com largura de 100% */
+    z-index: 999; /* Deixa o header por cima de qualquer outro conteúdo */
+}
+
+.header-nav {
+    display: flex; /* Torna o conteúdo flexível, deixando lado a lado */
+    justify-content: space-between; /* Deixa cada conteúdo em um canto da página */
+    align-items: center; /* Centraliza a altura dos conteúdos */
+    flex-wrap: wrap; /* Permite que o conteúdo seja quebrado em outra linha se necessário */
+    height: 100px; /* Altura do header */
+}
+
+.header-nav ul {
+    display: flex; /* Torna o conteúdo flexível, deixando lado a lado */
+    gap: 20px /* Da espaçamento entre os tópicos */
+}
+
+.header-nav a {
+    color: #fff;
+    font-weight: bold;
+}
+/* ---------- */ 
+
+
+
+/* Sessão Home */
+.section-home {
+    padding: 200px 50px;
+    background-color: #111;
+    color: white;
+    position: relative;
+}
+
+.home-texto h1{
+    max-width: 650px;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.home-texto h1 span{
+    color: #650000;
+}
+
+.home-texto p {
+    font-size: 20px;
+    max-width: 600px;
+    margin: 40px 0px;
+    color: #9ca3af;
+}
+/* --------- */
+
+
+
+/* Sessão Quem Sou */
+.section-quemsou {
+    padding: 70px 0px;
+    background-color: #111;
+    color: white;
+}
+
+.quemsou-box {
+    background-color: #151515;
+    border: 2px solid #1f1f1f;
+    padding: 25px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+}
+
+.quemsou-img {
+    background-image: url(../assets/img/foto.jpg);
+    width: 47%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    height: 500px;
+}
+
+.quemsou-content {
+    width: 49%;
+}
+
+.quemsou-content-titulo {
+    color: #650000;
+    font-weight: normal;
+}
+
+.quemsou-content-nome {
+    margin: 15px 0px;
+    font-size: 30px;
+}
+
+.quemsou-content-cargo {
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.quemsou-content p {
+    margin: 35px 0px;
+    color: #9ca3af;
+    line-height: 150%;
+}
+
+.quemsou-content nav ul {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.quemsou-content nav ul a {
+    background-color: #111;
+    border: 2px solid #1f1f1f;
+    border-radius: 5px;
+    padding: 15px;
+    color: #650000;
+}
+/* ---------- */
+
+
+
+/* Sessão Experiências */
+.section-experiencias {
+    padding: 100px 50px;
+    background-color: #151515;
+    color: white;
+}
+
+.section-experiencias h1 {
+    padding-bottom: 25px;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.section-experiencias h1 span {
+    color: #650000;
+}
+
+.experiencias {
+    margin-top: 35px;
+    display: flex;
+    gap: 40px;
+}
+
+.experiencias-lista {
+    display: flex;
+    width: 25%;
+    flex-direction: column;
+}
+
+.empresa {
+    padding: 25px 35px;
+    text-align: left;
+    background-color: #111;
+    border-left: 4px solid #111;
+}
+
+.empresa-ativa {
+    border-left: 4px solid #650000;
+    color: #650000;
+}
+
+.experiencias-conteudo {
+    width: 75%;
+}
+
+.cargo-e-periodo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cargo-e-periodo h4 {
+    font-size: 25px;
+} 
+
+.cargo-e-periodo p {
+    color: #9ca3af;
+} 
+
+.nome-empresa {
+    margin: 30px 0px;
+    font-size: 20px;
+    color: #650000;
+}
+
+.descricao {
+    color: #9ca3af;
+    line-height: 150%;
+}
+/* ---------- */ 
+
+
+
+/* Sessão Projetos */
+.section-projetos {
+    padding: 100px 50px;
+    text-align: center;
+    background-color: #111;
+    color: white;
+}
+
+.section-projetos h1 {
+    padding-bottom: 25px;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.section-projetos h1 span {
+    color: #650000;
+}
+
+.projetos {
+    margin: 25px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.projeto-box {
+    height: auto;
+    padding: 30px;
+    margin: 10px;
+    flex-basis: calc(33% - 20px);
+    flex-grow: 1;
+    border: 1px solid #650000;
+    transition: 1s all ease;
+    background-color: #151515;
+}
+
+.projeto-box h3 {
+    font-size: 25px;
+}    
+
+.projeto-box p {
+    margin: 25px 0px;
+    color: #9ca3af;
+    line-height: 150%;
+    font-size: 18px;
+}
+
+.projeto-box a {
+    color: #650000;
+    font-size: 20px;
+}
+
+.repositorios {
+    color: #650000;
+    font-size: 20px;
+}
+/* ---------- */
+
+
+
+/* Sessão Conhecimentos */
+.section-conhecimentos {
+    padding: 100px 50px;
+    background-color: #151515;
+    color: white;
+}
+
+.conhecimentos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px;
+}
+
+.conhecimentos-titulo {
+    width: 50%;
+    min-height: 400px;
+}
+
+.conhecimentos-titulo h1 {
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.conhecimentos-titulo h1 span {
+    color: #650000;
+}
+
+.conhecimentos-titulo p {
+    color: #9ca3af;
+    max-width: 500px;
+    line-height: 150%;
+}
+
+.conhecimentos-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    width: 50%;
+}
+
+.conhecimentos-card {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 20%;
+    flex-grow: 1;
+    height: 130px;
+    background-color: #151515;
+    position: relative;
+    border: 1px solid #1f1f1f;
+    border-radius: 4px;
+    transition: 1s all ease;
+}
+/* ---------- */
+
+
+
+/* Estilos do Footer */
+footer {
+    background-color: #111;
+    color: white;
+    padding: 25px 0px;
+    width: 100%;
+    height: auto;
+}
+/* ---------- */

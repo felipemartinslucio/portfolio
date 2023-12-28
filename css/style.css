@@ -1,23 +1,27 @@
 /* Estilos Gerais */
+:root {
+    --primary: #111;
+    --secundary: #650000;
+    --terciary: #151515;
+}
+
 * {
-    padding: 0; /* Zera o padding padrão do navegador */
-    margin: 0; /* Zera a margem padrão do navegador */
-    font-family: 'Arial', sans-serif; /* Fonte */
-    box-sizing: border-box; /* Faz com que as bordas sejam inclusas no tamanho do width e height */
-}
-
-ul, ol {
-    list-style: none; /* Remove o sublinhado dos tópicos */
-}
-
-a {
-    text-decoration: none; /* Remove a decoração dos links */
+    font-family: 'Ubuntu', sans-serif; /* Fonte */
 }
 
 img {
     max-width: 100%;
     height: auto;
     display: block;
+}
+/* ---------- */
+
+
+
+/* Fonte */
+@font-face {
+    font-family: Ubuntu;
+    src: url(../assets/fonts/Ubuntu-Regular.ttf), url(../assets/fonts/Ubuntu-Italic.ttf), url(../assets/fonts/Ubuntu-Light.ttf), url(../assets/fonts/Ubuntu-LightItalic.ttf), url(../assets/fonts/Ubuntu-Medium.ttf), url(../assets/fonts/Ubuntu-MediumItalic.ttf), url(../assets/fonts/Ubuntu-Bold.ttf), url(../assets/fonts/Ubuntu-BoldItalic.ttf);
 }
 /* ---------- */
 
@@ -34,10 +38,8 @@ img {
 
 /* Estilos do Header */
 header {
-    padding: 0 50px;
-    background-color: #111;
-    border-bottom: 1px solid #101013;
-    color: white;
+    background-color: var(--primary);
+    border-bottom: 1px solid var(--secundary);
     position: fixed; /* Torna o header fixo ao rolar a página */
     top: 0; /* Fixa o header no topo */
     left: 0; /* Fixa o header à esquerda */
@@ -58,7 +60,7 @@ header {
     gap: 20px /* Da espaçamento entre os tópicos */
 }
 
-.header-nav a {
+.header-nav ul li a {
     color: #fff;
     font-weight: bold;
 }
@@ -66,12 +68,11 @@ header {
 
 
 
-/* Sessão Home */
+/* Seção Home */
 .section-home {
-    padding: 200px 50px;
-    background-color: #111;
+    padding: 200px 0px;
+    background-color: var(--primary);
     color: white;
-    position: relative;
 }
 
 .home-texto h1{
@@ -81,28 +82,35 @@ header {
 }
 
 .home-texto h1 span{
-    color: #650000;
+    color: var(--secundary);
 }
 
 .home-texto p {
     font-size: 20px;
-    max-width: 600px;
-    margin: 40px 0px;
+    max-width: 550px;
+    margin: 25px 0px;
     color: #9ca3af;
+}
+
+.diamante {
+    position: absolute;
+    right: 0px;
+    top: 40%;
+    transform: translate(0%, -50%);
 }
 /* --------- */
 
 
 
-/* Sessão Quem Sou */
+/* Seção Quem Sou */
 .section-quemsou {
     padding: 70px 0px;
-    background-color: #111;
+    background-color: var(--primary);
     color: white;
 }
 
 .quemsou-box {
-    background-color: #151515;
+    background-color: var(--terciary);
     border: 2px solid #1f1f1f;
     padding: 25px;
     border-radius: 5px;
@@ -127,22 +135,23 @@ header {
 }
 
 .quemsou-content-titulo {
-    color: #650000;
+    color: var(--secundary);
     font-weight: normal;
+    font-size: 20px;
 }
 
 .quemsou-content-nome {
     margin: 15px 0px;
-    font-size: 30px;
+    font-size: 35px;
 }
 
 .quemsou-content-cargo {
-    margin-bottom: 15px;
+    font-size: 20px;
     font-weight: normal;
 }
 
 .quemsou-content p {
-    margin: 35px 0px;
+    margin: 30px 0px;
     color: #9ca3af;
     line-height: 150%;
 }
@@ -154,31 +163,30 @@ header {
 }
 
 .quemsou-content nav ul a {
-    background-color: #111;
+    background-color: var(--primary);
     border: 2px solid #1f1f1f;
     border-radius: 5px;
     padding: 15px;
-    color: #650000;
+    color: var(--secundary);
 }
 /* ---------- */
 
 
 
-/* Sessão Experiências */
+/* Seção Experiências */
 .section-experiencias {
-    padding: 100px 50px;
-    background-color: #151515;
+    padding: 100px 0px;
+    background-color: var(--terciary);
     color: white;
 }
 
 .section-experiencias h1 {
     padding-bottom: 25px;
-    font-weight: bold;
     font-size: 40px;
 }
 
 .section-experiencias h1 span {
-    color: #650000;
+    color: var(--secundary);
 }
 
 .experiencias {
@@ -195,14 +203,13 @@ header {
 
 .empresa {
     padding: 25px 35px;
-    text-align: left;
-    background-color: #111;
-    border-left: 4px solid #111;
+    background-color: var(--primary);
+    border-left: 4px solid var(--primary);
 }
 
 .empresa-ativa {
-    border-left: 4px solid #650000;
-    color: #650000;
+    border-left: 4px solid var(--secundary);
+    color: var(--secundary);
 }
 
 .experiencias-conteudo {
@@ -224,9 +231,9 @@ header {
 } 
 
 .nome-empresa {
-    margin: 30px 0px;
+    margin: 25px 0px;
     font-size: 20px;
-    color: #650000;
+    color: var(--secundary);
 }
 
 .descricao {
@@ -237,11 +244,11 @@ header {
 
 
 
-/* Sessão Projetos */
+/* Seção Projetos */
 .section-projetos {
-    padding: 100px 50px;
+    padding: 100px 0px;
     text-align: center;
-    background-color: #111;
+    background-color: var(--primary);
     color: white;
 }
 
@@ -252,7 +259,7 @@ header {
 }
 
 .section-projetos h1 span {
-    color: #650000;
+    color: var(--secundary);
 }
 
 .projetos {
@@ -270,9 +277,9 @@ header {
     margin: 10px;
     flex-basis: calc(33% - 20px);
     flex-grow: 1;
-    border: 1px solid #650000;
+    border: 1px solid var(--secundary);
     transition: 1s all ease;
-    background-color: #151515;
+    background-color: var(--terciary);
 }
 
 .projeto-box h3 {
@@ -287,22 +294,27 @@ header {
 }
 
 .projeto-box a {
-    color: #650000;
+    color: var(--secundary);
     font-size: 20px;
+    display: flex;
+    margin: 15px 0;
+    border: 1px solid;
+    padding: 15px;
+    justify-content: center;
 }
 
 .repositorios {
-    color: #650000;
+    color: var(--secundary);
     font-size: 20px;
 }
 /* ---------- */
 
 
 
-/* Sessão Conhecimentos */
+/* Seção Conhecimentos */
 .section-conhecimentos {
-    padding: 100px 50px;
-    background-color: #151515;
+    padding: 100px 0px;
+    background-color: var(--terciary);
     color: white;
 }
 
@@ -327,13 +339,7 @@ header {
 }
 
 .conhecimentos-titulo h1 span {
-    color: #650000;
-}
-
-.conhecimentos-titulo p {
-    color: #9ca3af;
-    max-width: 500px;
-    line-height: 150%;
+    color: var(--secundary);
 }
 
 .conhecimentos-cards {
@@ -351,7 +357,7 @@ header {
     width: 20%;
     flex-grow: 1;
     height: 130px;
-    background-color: #151515;
+    background-color: var(--terciary);
     position: relative;
     border: 1px solid #1f1f1f;
     border-radius: 4px;
@@ -363,10 +369,171 @@ header {
 
 /* Estilos do Footer */
 footer {
-    background-color: #111;
+    background-color: var(--primary);
+    border-top: 1px solid var(--secundary);
     color: white;
     padding: 25px 0px;
     width: 100%;
     height: auto;
+}
+/* ---------- */
+
+
+
+/* Responsividade */
+@media screen and (max-width: 1200px) {
+    .header-nav {
+        margin: 0 30px;
+    }
+
+    .home-texto h1,
+    .home-texto p,
+    .quemsou-box,
+    .section-experiencias h1,
+    .experiencias,
+    .projetos,
+    .conhecimentos {
+        margin: 0 30px;
+    }
+
+    .home-texto h1 {
+        margin: 0 30px;
+    }
+
+    .home-texto p {
+        margin: 25px 30px;
+    }
+
+    .diamante {
+        width: 350px;
+        top: 55%;
+    }
+
+    .quemsou-box {
+        margin: 0 30px;
+    }
+
+    .section-experiencias h1 {
+        margin: 0 30px;
+    }
+
+    .projetos {
+        margin: 0 30px;
+    }
+
+    .conhecimentos {
+        margin: 0 30px;
+    }
+
+    footer h4 {
+        margin: 0 30px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .header-nav ul {
+        align-items: center;
+    }
+
+    .header-nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .home-texto h1 {
+        font-size: 32px;
+    }
+
+    .home-texto p {
+        font-size: 18px;
+    }
+
+    .diamante {
+        width: 200px;
+        top: 45%;
+    }
+
+    .quemsou-box {
+        flex-direction: column;
+    }
+
+    .quemsou-img {
+        width: 100%;
+        height: 300px;
+    }
+
+    .quemsou-content {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .section-experiencias h1 {
+        font-size: 32px;
+    }
+
+    .experiencias-lista,
+    .experiencias-conteudo {
+        width: 100%;
+    }
+
+    .projetos .projeto-box {
+        flex-basis: calc(50% - 20px);
+    }
+
+    .conhecimentos-titulo,
+    .conhecimentos-cards {
+        width: 100%;
+        min-height: 0;
+        text-align: center;
+    }
+
+    .conhecimentos-card {
+        width: 45%;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-nav ul {
+        text-align: center;
+    }
+
+    .home-texto h1 {
+        font-size: 28px;
+    }
+
+    .home-texto p {
+        font-size: 16px;
+    }
+
+    .diamante {
+        display: none;
+    }
+
+    .quemsou-img {
+        height: 250px;
+    }
+
+    .section-experiencias h1 {
+        font-size: 28px;
+    }
+
+    .experiencias-lista,
+    .experiencias-conteudo {
+        width: 100%;
+    }
+
+    .projetos .projeto-box {
+        flex-basis: calc(100% - 20px);
+    }
+
+    .conhecimentos-titulo,
+    .conhecimentos-cards {
+        width: 100%;
+    }
+
+    .conhecimentos-card {
+        width: 100%;
+        height: 100px;
+    }
 }
 /* ---------- */

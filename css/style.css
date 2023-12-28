@@ -435,10 +435,6 @@ footer {
         align-items: center;
     }
 
-    .header-nav ul li {
-        margin-bottom: 10px;
-    }
-
     .home-texto h1 {
         font-size: 32px;
     }
@@ -534,6 +530,21 @@ footer {
     .conhecimentos-card {
         width: 100%;
         height: 100px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .quemsou-content nav ul {
+        gap: 20px;
+    }
+
+    .experiencias {
+        display: block;
+    }
+
+    .cargo-e-periodo {
+        margin-top: 20px;
+        display: block;
     }
 }
 /* ---------- */

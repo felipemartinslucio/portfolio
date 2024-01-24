@@ -1,0 +1,605 @@
+/* Fonte */
+@font-face {
+    font-family: Ubuntu;
+    src: url(../font/Ubuntu-Regular.ttf), url(../font/Ubuntu-Italic.ttf), url(../font/Ubuntu-Light.ttf), url(../font/Ubuntu-LightItalic.ttf), url(../font/Ubuntu-Medium.ttf), url(../font/Ubuntu-MediumItalic.ttf), url(../font/Ubuntu-Bold.ttf), url(../font/Ubuntu-BoldItalic.ttf);
+}
+/* ---------- */
+
+
+
+/* Estilos Gerais */
+:root {
+    --primary: #eee; /* Dark theme: #111 */ 
+    --secundary: #900000; /* Dark theme: #900000 */ 
+    --terciary: #e5e5e5; /* Dark theme: #151515 */ 
+    --primary-text: #000; /* Dark theme: #fff */ 
+    --secundary-text: #666; /* Dark theme: #aaa */ 
+    --border-color: #ddd; /* Dark theme: #222 */ 
+}
+
+* {
+    font-family: 'Ubuntu', sans-serif; /* Fonte */
+    /*border: 1px red solid;*/ /* Serve para colocar borda em todos os elementos para facilitar a estilização */
+}
+
+html {
+    scroll-behavior: smooth; /* Faz uma rolagem suave ao clicar em um redirecionamento interno, por exemplo quando clico em projetos na navbar */
+    font-size: 62.5%; /* Define um tamanho de fonte inicial para depois só usar o REM como medida responsiva, onde 1REM = 10px */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+/* ---------- */
+
+
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--secundary);
+    border-radius: 5px;
+}
+/* ---------- */ 
+
+
+
+/* Cor ao grifar um texto com o mouse */
+::selection {
+    background-color: var(--secundary);
+    color: #fff;
+}
+/* ---------- */
+
+
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* ---------- */
+
+
+
+/* Header */
+header {
+    padding: 0px 50px;
+    background-color: var(--primary);
+    border-bottom: 1px solid var(--secundary);
+    z-index: 999;
+    width: 100%;
+    position: fixed;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+#nav-list {
+    display: flex;
+    gap: 50px;
+}
+
+#nav-list li a {
+    color: var(--primary-text);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+#nav-list li a:hover {
+    color: var(--secundary);
+}
+
+@media screen and (max-width: 1200px) {
+    header {
+        padding: 0px 25px;
+    }
+}
+/* ---------- */
+
+
+
+/* Seção Home */
+#section-home {
+    padding: 200px 50px;
+    background-color: var(--primary);
+}
+
+@media screen and (max-width: 1200px) {
+    #section-home {
+        padding: 200px 25px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+#home h1 {
+    color: var(--primary-text);
+    max-width: 650px;
+    line-height: 150%;
+    font-size: 4rem;
+}
+
+@media screen and (max-width: 1200px) {
+    #home h1 {
+        font-size: 3.2rem;
+    }
+}
+
+#home h1 span {
+    color: var(--secundary);
+}
+
+#home p {
+    color: var(--secundary-text);
+    font-size: 2rem;
+    max-width: 550px;
+    margin: 25px 0px;
+    line-height: 150%;
+}
+
+#home a {
+    display: flex;
+    justify-content: center;
+    background: var(--secundary);
+    color: #fff;
+    padding: 20px;
+    max-width: 250px;
+    border-radius: 5px;
+    font-size: 1.8rem;
+}
+/* ---------- */
+
+
+
+/* Seção Sobre */
+#section-sobre {
+    padding: 100px 50px;
+    background-color: var(--primary);
+}
+
+@media screen and (max-width: 1200px) {
+    #section-sobre {
+        padding: 100px 25px;
+    }
+}
+
+#sobre {
+    background-color: var(--terciary);
+    border: 2px solid var(--border-color);
+    padding: 25px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+    #sobre {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+}
+
+#sobre-foto {
+    width: 47%;
+    background-image: url("../img/foto.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    height: 500px;
+}
+
+@media screen and (max-width: 1200px) {
+    #sobre-foto {
+        width: 100%;
+        height: 400px;
+    }
+}
+
+#sobre-foto h3 {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+    width: 150px;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 15px;
+}
+
+#sobre-conteudo {
+    width: 48%;
+}
+
+@media screen and (max-width: 1200px) {
+    #sobre-conteudo {
+        width: 100%;
+    }
+}
+
+#sobre-conteudo h4 {
+    font-size: 2rem;
+    color: var(--secundary);
+}
+
+#sobre-conteudo h2 {
+    font-size: 4rem;
+    margin: 15px 0px;
+    color: var(--primary-text);
+}
+
+@media screen and (max-width: 1200px) {
+    #sobre-conteudo h2 {
+        font-size: 3rem;
+    }
+}
+
+#sobre-conteudo h3 {
+    font-size: 1.8rem;
+    font-weight: normal;
+    color: var(--primary-text);
+}
+
+#sobre-conteudo p {
+    font-size: 1.8rem;
+    color: var(--secundary-text);
+    line-height: 150%;
+    margin: 35px 0px;
+}
+
+#sobre-links ul {
+    display: flex;
+    gap: 15px;
+}
+
+@media screen and (max-width: 1200px) {
+    #sobre-links ul {
+        flex-wrap: wrap;
+    }
+}
+
+#sobre-links ul a {
+    background-color: var(--primary);
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+#sobre-links ul a:hover {
+    border-color: var(--secundary);
+}
+/* ---------- */
+
+
+
+/* Seção Experiences */
+#section-experiences {
+    background-color: var(--terciary);
+    padding: 100px 50px;
+}
+
+@media screen and (max-width: 1200px) {
+    #section-experiences {
+        padding: 100px 25px;
+    }
+}
+
+#section-experiences .container h2 {
+    padding-bottom: 25px;
+    color: var(--primary-text);
+    font-size: 4rem;
+}
+
+#section-experiences .container h2 span {
+    color: var(--secundary);
+}
+
+#experiences {
+    margin-top: 35px;
+    display: flex;
+    gap: 40px;
+}
+
+@media screen and (max-width: 1200px) {
+    #experiences {
+        flex-wrap: wrap;
+    }
+}
+
+#experiences-list {
+    width: 25%;
+}
+
+@media screen and (max-width: 1200px) {
+    #experiences-list {
+        width: 100%;
+    }
+}
+
+.experience {
+    padding: 25px;
+    text-align: left;
+    background-color: var(--primary);
+    border-left: 5px solid var(--primary);
+    color: var(--primary-text);
+    cursor: pointer;
+}
+
+.experience h3 {
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+
+.active-experience {
+    border-left: 5px solid var(--secundary);
+    color: var(--secundary);
+}
+
+.active-experience h3 {
+    font-weight: bold;
+}
+
+.experience-content {
+    width: 75%;
+}
+
+@media screen and (max-width: 1200px) {
+    .experience-content {
+        width: 100%;
+    }
+}
+
+.experience-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1200px) {
+    .experience-header {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+.experience-cargo {
+    font-size: 2.5rem;
+    font-weight: normal;
+    color: var(--primary-text);
+}
+
+.experience-data {
+    font-size: 2rem;
+    color: var(--secundary-text);
+}
+
+.experience-empresa {
+    font-size: 2.2rem;
+    margin: 25px 0px;
+    color: var(--secundary);
+}
+
+.experience-desc {
+    font-size: 1.8rem;
+    line-height: 150%;
+    color: var(--secundary-text);
+}
+/* ---------- */
+
+
+
+/* Seção Projects */
+#section-projects {
+    padding: 100px 50px;
+    text-align: center;
+    background-color: var(--primary);
+}
+
+@media screen and (max-width: 1200px) {
+    #section-projects {
+        padding: 100px 25px;
+    }
+}
+
+#section-projects .container h2 {
+    padding-bottom: 25px;
+    color: var(--primary-text);
+    font-size: 4rem;
+}
+
+#section-projects .container h2 span {
+    color: var(--secundary);
+}
+
+#projects {
+    margin: 25px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.project {
+    padding: 35px;
+    margin: 10px;
+    flex-basis: calc(33% - 20px);
+    flex-grow: 1;
+    border: 1px solid var(--primary);
+    background-color: var(--terciary);
+}
+
+.project:hover {
+    border: 1px solid var(--secundary);
+}
+
+@media screen and (max-width: 1200px) {
+    .project {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .project {
+        flex-basis: calc(100% - 20px);
+    }
+}
+
+.active-project {
+    border: 1px solid var(--secundary)
+}
+
+.project h3 {
+    color: var(--primary-text);
+    font-size: 2.4rem;
+    font-weight: normal;
+}
+
+.project p {
+    margin: 25px 0px;
+    color: var(--secundary-text);
+    line-height: 3rem;
+    font-size: 1.8rem;
+}
+
+#section-projects a {
+    color: var(--secundary);
+    font-size: 2rem;
+}
+/* ---------- */
+
+
+
+/* Seção Skills */
+#section-skills {
+    padding: 100px 50px;
+    background-color: var(--primary);
+}
+
+@media screen and (max-width: 1200px) {
+    #section-skills {
+        padding: 100px 25px;
+    }
+}
+
+#skills {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+#skills-cards,#skills-text {
+    width: 50%;
+}
+
+@media screen and (max-width: 1200px) {
+    #skills-cards, #skills-text {
+        width: 100%;
+    }
+}
+
+#skills-text h2 {
+    margin-bottom: 25px;
+    color: var(--primary-text);
+    font-size: 4rem;
+}
+
+#skills-text h2 span {
+    color: var(--secundary);
+}
+
+#skills-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+@media screen and (max-width: 1200px) {
+    #skills-cards {
+        margin-top: 50px;
+    }
+}
+
+#skills-cards article {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 20%;
+    flex-grow: 1;
+    height: 130px;
+    background-color: var(--terciary);
+    position: relative;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    color: var(--primary-text);
+}
+
+#skills-cards article:hover {
+    border: 1px solid var(--secundary);
+}
+
+@media screen and (max-width: 1000px) {
+    #skills-cards article {
+        width: 40%;
+    }
+}
+/* ---------- */
+
+
+
+/* Footer */
+footer {
+    background-color: var(--terciary);
+    color: var(--primary-text);
+    padding: 25px 0px;
+}
+
+footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+footer p {
+    font-size: 1.8rem;
+}
+
+footer p a {
+    color: var(--secundary);
+    font-weight: bold;
+}
+
+footer .powered {
+    display: flex;
+    gap: 15px;
+}
+
+@media screen and (max-width: 1200px) {
+    footer .container {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+}
+/* ---------- */

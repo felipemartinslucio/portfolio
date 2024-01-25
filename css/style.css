@@ -279,14 +279,14 @@ header {
     }
 }
 
-#sobre-links ul a {
+#sobre-links ul li {
     background-color: var(--primary);
     border: 2px solid var(--border-color);
     border-radius: 5px;
     padding: 15px;
 }
 
-#sobre-links ul a:hover {
+#sobre-links ul li:hover {
     border-color: var(--secundary);
 }
 /* ---------- */
